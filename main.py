@@ -19,7 +19,7 @@ def calculate_sum():
             
         except ValueError:
             # Handle cases where the input is not a number
-            print("nvalid input. Please enter a number or 'exit'.")
+            print("Invalid input. Please enter a number or 'exit'.")
 
     print("---")
     print(f"Final Total Sum: {total_sum}")
