@@ -1,7 +1,6 @@
 def calculate_sum():
     total_sum = 0
     
-    print("Welcome to our program...")
     print("Type a number to add it to the sum.")
     print("Type 'exit' to finish and see the result.\n")
 
