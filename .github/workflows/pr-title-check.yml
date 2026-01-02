@@ -1,0 +1,22 @@
+on:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check PR title starts with TASK-..
+        run: |
+          echo "PR title: ${{ github.event.pull_request.title }}"
+          if [[ ! "${{ github.event.pull_request.title }}" =~ ^TASK- ]]; then
+            echo "PR title must start with 'TASK-'"
+            exit 1
+          fi
+          echo "PR title is valid"
