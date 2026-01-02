@@ -14,7 +14,7 @@ def calculate_sum():
         try:
             # Convert input to a float to handle decimals
             number = float(user_input)
-            total_sum += number +1
+            total_sum += number +2
             print(f"Current sum: {total_sum}")
             
         except ValueError:
